@@ -87,7 +87,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [newCourse, setNewCourse] = useState({ courseCode: '', courseName: '', units: 3, grade: 'A', semester: 'Fall 2024' });
   const { user, isAuthenticated, showSignUp, handleGoogleSignIn, setUser, setShowSignUp, setIsAuthenticated} = useGoogleAuth();
-
+  const [currentPage, setCurrentPage] = useState('home');
 
   const steps = [
     { id: 1, label: "Choose UC", icon: School, completed: selectedUC !== null },
