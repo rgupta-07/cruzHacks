@@ -1,13 +1,28 @@
 // useGoogleAuth.js
 import { useState, useEffect } from 'react';
 import { auth } from './firebase';
-import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  onAuthStateChanged
+} from 'firebase/auth';
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc
+} from 'firebase/firestore';
 
 const db = getFirestore();
 
 export const useGoogleAuth = () => {
-  const [user, setUser] = useState({ email: '', name: '', major: '', communityCollege: '' });
+  const [user, setUser] = useState({
+    uid: '',
+    email: '',
+    name: '',
+    major: '',
+    communityCollege: ''
+  });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
 
@@ -15,44 +30,53 @@ export const useGoogleAuth = () => {
     try {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
-
       const loggedInUser = result.user;
+
+      // Set local state
       setUser({
+        uid: loggedInUser.uid,
         email: loggedInUser.email || '',
         name: loggedInUser.displayName || '',
         major: '',
         communityCollege: ''
       });
 
-      // Check Firestore for user document
+      // Firestore user document
       const userDocRef = doc(db, 'userInformation', loggedInUser.uid);
       const userDocSnap = await getDoc(userDocRef);
 
       if (userDocSnap.exists()) {
-        // Document exists, update the name field
-        await setDoc(userDocRef, { name: loggedInUser.displayName || '' }, { merge: true });
+        // Update name if doc exists
+        await setDoc(
+          userDocRef,
+          { name: loggedInUser.displayName || '' },
+          { merge: true }
+        );
       } else {
-        // Document does not exist, create new document with user data
+        // Create new user document
         await setDoc(userDocRef, {
           uid: loggedInUser.uid,
-          name: loggedInUser.displayName || '',
           email: loggedInUser.email || '',
+          name: loggedInUser.displayName || '',
+          major: '',
+          communityCollege: ''
         });
       }
 
       setIsAuthenticated(true);
       setShowSignUp(true);
-      console.log("User signed in:", loggedInUser);
+      console.log('User signed in:', loggedInUser);
 
     } catch (error) {
-      console.error("Google Sign-In Error:", error.message);
+      console.error('Google Sign-In Error:', error.message);
     }
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
         setUser({
+          uid: firebaseUser.uid,
           email: firebaseUser.email || '',
           name: firebaseUser.displayName || '',
           major: '',
@@ -61,7 +85,13 @@ export const useGoogleAuth = () => {
         setIsAuthenticated(true);
         setShowSignUp(true);
       } else {
-        setUser({ email: '', name: '', major: '', communityCollege: '' });
+        setUser({
+          uid: '',
+          email: '',
+          name: '',
+          major: '',
+          communityCollege: ''
+        });
         setIsAuthenticated(false);
         setShowSignUp(false);
       }
@@ -70,5 +100,12 @@ export const useGoogleAuth = () => {
     return () => unsubscribe();
   }, []);
 
-  return { user, isAuthenticated, showSignUp, handleGoogleSignIn, setUser, setShowSignUp, setIsAuthenticated };
+  return {
+    user,
+    isAuthenticated,
+    showSignUp,
+    handleGoogleSignIn,
+    setUser,
+    setShowSignUp
+  };
 };

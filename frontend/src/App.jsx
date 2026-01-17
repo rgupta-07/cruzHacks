@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { 
   GraduationCap, Upload, CheckCircle2, Circle, User, Mail, Building2, BookOpen,
   ArrowRight, AlertTriangle, ExternalLink, Plus, Trash2, Loader2, CheckCircle,
@@ -10,6 +10,8 @@ const MOCK_COLLEGES = [
   "Ohlone College", "San Jose City College", "Evergreen Valley College",
 ];
 import { useGoogleAuth } from './useGoogleAuth';
+import { updateUserProfile, fetchUserProfile } from './fireData';
+
 
 
 
@@ -27,6 +29,7 @@ const UC_CAMPUSES = [
   { id: "ucsb", name: "UC Santa Barbara", available: false },
   { id: "ucm", name: "UC Merced", available: false },
 ];
+
 
 const generateMockResults = (courses, major) => {
   const gradePoints = { "A": 4.0, "A-": 3.7, "B+": 3.3, "B": 3.0, "B-": 2.7, "C+": 2.3, "C": 2.0, "C-": 1.7, "D": 1.0, "F": 0 };
@@ -81,8 +84,9 @@ function App() {
   const [verificationResults, setVerificationResults] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [newCourse, setNewCourse] = useState({ courseCode: '', courseName: '', units: 3, grade: 'A', semester: 'Fall 2024' });
-  const { user, isAuthenticated, showSignUp, handleGoogleSignIn, setUser, setShowSignUp, setIsAuthenticated} = useGoogleAuth();
+  const { user, isAuthenticated, showSignUp, handleGoogleSignIn, setUser, setShowSignUp, } = useGoogleAuth();
 
+  
 
   const steps = [
     { id: 1, label: "Choose UC", icon: School, completed: selectedUC !== null },
@@ -93,7 +97,6 @@ function App() {
   const handleProfileSubmit = (e) => {
     e.preventDefault();
     if (user.name && user.major && user.communityCollege) {
-      setIsAuthenticated(true);
       setCurrentStep(1);
     }
   };
@@ -196,8 +199,16 @@ function App() {
           </div>
           <p className="text-white/70 text-sm mb-4">Complete your profile to get started</p>
           <div><label className="block text-white/70 text-sm mb-2">Full Name</label><input type="text" value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} placeholder="Enter your name" className="input-field" required /></div>
-          <div><label className="block text-white/70 text-sm mb-2">Intended Major</label><select value={user.major} onChange={(e) => setUser({ ...user, major: e.target.value })} className="input-field" required><option value="">Select a major</option>{MOCK_MAJORS.map(m => <option key={m} value={m}>{m}</option>)}</select></div>
-          <div><label className="block text-white/70 text-sm mb-2">Community College</label><select value={user.communityCollege} onChange={(e) => setUser({ ...user, communityCollege: e.target.value })} className="input-field" required><option value="">Select your college</option>{MOCK_COLLEGES.map(c => <option key={c} value={c}>{c}</option>)}</select></div>
+          <div><label className="block text-white/70 text-sm mb-2">Intended Major</label>
+          <select value={user.major} onChange={(e) => {
+            setUser({ ...user, major: e.target.value });
+            updateUserProfile(user.uid, { major: e.target.value });
+          }} className="input-field" required><option value="">Select a major</option>{MOCK_MAJORS.map(m => <option key={m} value={m}>{m}</option>)}</select>
+          </div>
+          <div><label className="block text-white/70 text-sm mb-2">Community College</label><select value={user.communityCollege} onChange={(e) => {
+            setUser({ ...user, communityCollege: e.target.value });
+            updateUserProfile(user.uid, { communityCollege: e.target.value });
+          }} className="input-field" required><option value="">Select your college</option>{MOCK_COLLEGES.map(c => <option key={c} value={c}>{c}</option>)}</select></div>
           <button type="submit" className="btn-primary w-full mt-6">Continue<ArrowRight className="w-5 h-5 inline ml-2" /></button>
         </form>
       )}
