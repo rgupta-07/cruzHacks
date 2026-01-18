@@ -252,10 +252,12 @@ function App() {
               <Info className="w-4 h-4" />
               <span className="font-medium">Resources</span>
             </button>
-            <button onClick={() => setCurrentPage('dashboard')} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${currentPage === 'dashboard' ? 'bg-ucsc-gold/20 text-ucsc-gold' : 'text-white/70 hover:text-white hover:bg-white/10'}`}>
-              <Info className="w-4 h-4" />
-              <span className="font-medium">Dashboard</span>
-            </button>
+            {verificationResults && (
+  <button onClick={() => setCurrentPage('dashboard')} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${currentPage === 'dashboard' ? 'bg-ucsc-gold/20 text-ucsc-gold' : 'text-white/70 hover:text-white hover:bg-white/10'}`}>
+    <Info className="w-4 h-4" />
+    <span className="font-medium">Dashboard</span>
+  </button>
+)}
             {/* Profile Dropdown */}
             {isAuthenticated && (
               <div className="relative" ref={profileDropdownRef}>
@@ -524,12 +526,8 @@ function App() {
           // 🔒 Disable future steps
           const isFutureStep = stepNumber > currentStep;
 
-          // 🚫 Explicitly grey out Step 3 when on Step 2
-          const isDisabled =
-          !isAuthenticated ||
-          isFutureStep ||
-          (stepNumber === 3 && currentStep === 2);
-
+        
+          const isDisabled = !isAuthenticated || stepNumber === 3 && (currentStep === 1 || currentStep === 2 || showSignUp);
           const canGoToStep = !isDisabled;
           return (
             <button
