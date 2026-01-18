@@ -17,12 +17,11 @@ import { auth } from './firebase';
 import { addCourseToTranscript, removeCourseFromTranscript } from './fireData';
 const db = getFirestore();
 
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = "";
 const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
 
 const AI_MODEL = "anthropic/claude-opus-4.5";
 
-// ==================== AI TRANSCRIPT PARSER ====================
 const parseTranscriptWithAI = async (text) => {
   if (!OPENROUTER_API_KEY) throw new Error("OpenRouter API key not configured");
   const prompt = `Extract courses from this transcript as JSON array. Each course: {courseCode, courseName, units (number), grade, semester}. Return ONLY JSON array:\n\n${text}`;
@@ -42,7 +41,6 @@ const parseTranscriptWithAI = async (text) => {
   throw new Error("Could not parse courses");
 };
 
-// ==================== AI-POWERED VERIFICATION ====================
 const verifyWithAI = async (courses, major, targetUC) => {
   console.log("🚀 Starting AI verification with model:", AI_MODEL);
   console.log("Courses:", courses);
