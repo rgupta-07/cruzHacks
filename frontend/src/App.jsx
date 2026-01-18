@@ -6,6 +6,7 @@ import {
   LogOut,
 } from 'lucide-react';
 
+import Dashboard from './Dashboard';
 const MOCK_COLLEGES = [
   "De Anza College", "Foothill College", "Mission College", "West Valley College",
   "Ohlone College", "San Jose City College", "Evergreen Valley College",
@@ -238,6 +239,7 @@ function App() {
           </button>
 
           <div className="hidden md:flex items-center gap-6">
+    
             <button onClick={() => setCurrentPage('about')} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${currentPage === 'about' ? 'bg-ucsc-gold/20 text-ucsc-gold' : 'text-white/70 hover:text-white hover:bg-white/10'}`}>
               <Users className="w-4 h-4" />
               <span className="font-medium">About Us</span>
@@ -249,6 +251,10 @@ function App() {
             <button onClick={() => setCurrentPage('info')} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${currentPage === 'info' ? 'bg-ucsc-gold/20 text-ucsc-gold' : 'text-white/70 hover:text-white hover:bg-white/10'}`}>
               <Info className="w-4 h-4" />
               <span className="font-medium">Resources</span>
+            </button>
+            <button onClick={() => setCurrentPage('dashboard')} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${currentPage === 'dashboard' ? 'bg-ucsc-gold/20 text-ucsc-gold' : 'text-white/70 hover:text-white hover:bg-white/10'}`}>
+              <Info className="w-4 h-4" />
+              <span className="font-medium">Dashboard</span>
             </button>
             {/* Profile Dropdown */}
             {isAuthenticated && (
@@ -871,6 +877,12 @@ function App() {
           {renderExtraInfo()}
         </div>
       );
+    case 'dashboard':
+        return (
+          <div className="glass rounded-2xl p-8 min-h-[calc(100vh-12rem)]">
+            <Dashboard verificationResults={verificationResults} user={user} />
+          </div>
+        );
     default:
       return null;
   }
