@@ -171,7 +171,24 @@ function App() {
     setIsLoading(false);
   };
 
-   const renderNavBar = () => (
+  // Dropdown state for profile menu
+  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  // ref for dropdown menu
+  const profileDropdownRef = React.useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!profileDropdownOpen) return;
+    function handleClickOutside(event) {
+      if (profileDropdownRef.current && !profileDropdownRef.current.contains(event.target)) {
+        setProfileDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [profileDropdownOpen]);
+
+  const renderNavBar = () => (
     <nav className="glass rounded-2xl mb-6 relative z-60">
       <div className="px-6 py-4">
         <div className="flex items-center justify-between">
@@ -195,33 +212,70 @@ function App() {
               <Info className="w-4 h-4" />
               <span className="font-medium">Resources</span>
             </button>
-            {/* Sign Out Button */}
-          {isAuthenticated && (
-            <button
-              onClick={async () => {
-                try {
-                  await auth.signOut();
-                  setIsAuthenticated(false);
-                  setUser({});
-                  setCurrentStep(0);
-                  setSelectedUC(null);
-                  setCourses([]);
-                  setVerificationResults(null);
-                  setCurrentPage('home');
-                  setShowSignUp(false);
-                } catch (err) {
-                  console.error("Sign out failed:", err);
-                }
-              }}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-br from-red-600 to-red-700 text-white font-semibold shadow-md hover:scale-105 hover:bg-red-700/90 hover:from-red-600 hover:to-red-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-400"
-              style={{ willChange: 'transform' }}
-            >
-              <LogOut className="w-4 h-4" />
-              <span>Sign Out</span>
-            </button>
-          )}
+            {/* Profile Dropdown */}
+            {isAuthenticated && (
+              <div className="relative" ref={profileDropdownRef}>
+                <button
+                  onClick={() => setProfileDropdownOpen(v => !v)}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 shadow-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                  style={{ willChange: 'transform' }}
+                  aria-haspopup="true"
+                  aria-expanded={profileDropdownOpen}
+                >
+                  <User className="w-5 h-5 text-ucsc-gold" />
+                  <span className="font-medium">{user.name ? user.name.split(" ")[0] : "Profile"}</span>
+                  <svg className={`w-4 h-4 ml-1 transition-transform ${profileDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+                </button>
+                {profileDropdownOpen && (
+                  <div
+                    className="absolute right-0 mt-2 w-56 bg-gradient-to-br from-yellow-50 via-white to-yellow-100 rounded-2xl shadow-2xl ring-1 ring-black/10 z-50 animate-fade-in-fast"
+                    style={{ minWidth: '14rem', boxShadow: '0 8px 32px 0 rgba(255,200,0,0.16), 0 1.5px 8px 0 rgba(0,0,0,0.08)' }}
+                  >
+                    <div className="p-1.5">
+                      <div className="rounded-2xl bg-gradient-to-br from-ucsc-gold/80 via-yellow-100/90 to-white/90 shadow-lg">
+                        <button
+                          onClick={() => {
+                            setCurrentStep(0);
+                            setShowSignUp(true);
+                            setProfileDropdownOpen(false);
+                          }}
+                          className="flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-gradient-to-br from-ucsc-gold/90 to-yellow-400/90 text-ucsc-blue font-semibold hover:from-yellow-400 hover:to-ucsc-gold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ucsc-gold/40 mb-1"
+                          style={{ willChange: 'transform', borderRadius: '1rem' }}
+                        >
+                          <User className="w-4 h-4" />
+                          Edit Profile
+                        </button>
+                        <button
+                          onClick={async () => {
+                            try {
+                              await auth.signOut();
+                              setIsAuthenticated(false);
+                              setUser({});
+                              setCurrentStep(0);
+                              setSelectedUC(null);
+                              setCourses([]);
+                              setVerificationResults(null);
+                              setCurrentPage('home');
+                              setShowSignUp(false);
+                            } catch (err) {
+                              console.error("Sign out failed:", err);
+                            }
+                            setProfileDropdownOpen(false);
+                            window.location.reload();
+                          }}
+                          className="flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-gradient-to-br from-red-500/90 to-red-700/90 text-white font-semibold hover:from-red-600 hover:to-rose-600 hover:scale-[1.02] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-300/40"
+                          style={{ willChange: 'transform', borderRadius: '1rem' }}
+                        >
+                          <LogOut className="w-4 h-4" />
+                          Sign Out
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-
         </div>
       </div>
     </nav>
