@@ -291,14 +291,14 @@ async def get_uc_campuses():
     return {
         "campuses": [
             {"id": "ucsc", "name": "UC Santa Cruz", "available": True},
-            {"id": "ucb", "name": "UC Berkeley", "available": False},
-            {"id": "ucla", "name": "UCLA", "available": False},
-            {"id": "ucsd", "name": "UC San Diego", "available": False},
-            {"id": "ucd", "name": "UC Davis", "available": False},
-            {"id": "uci", "name": "UC Irvine", "available": False},
-            {"id": "ucr", "name": "UC Riverside", "available": False},
-            {"id": "ucsb", "name": "UC Santa Barbara", "available": False},
-            {"id": "ucm", "name": "UC Merced", "available": False},
+            {"id": "ucb", "name": "UC Berkeley", "available": True},
+            {"id": "ucla", "name": "UCLA", "available": True},
+            {"id": "ucsd", "name": "UC San Diego", "available": True},
+            {"id": "ucd", "name": "UC Davis", "available": True},
+            {"id": "uci", "name": "UC Irvine", "available": True},
+            {"id": "ucr", "name": "UC Riverside", "available": True},
+            {"id": "ucsb", "name": "UC Santa Barbara", "available": True},
+            {"id": "ucm", "name": "UC Merced", "available": True},
         ]
     }
 

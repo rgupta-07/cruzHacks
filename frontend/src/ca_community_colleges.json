@@ -1,0 +1,592 @@
+[
+  {
+    "id": 108807,
+    "name": "Allan Hancock College",
+    "url": "www.hancockcollege.edu/"
+  },
+  {
+    "id": 109208,
+    "name": "American River College",
+    "url": "https://www.arc.losrios.edu/"
+  },
+  {
+    "id": 109350,
+    "name": "Antelope Valley Community College District",
+    "url": "www.avc.edu/"
+  },
+  {
+    "id": 109819,
+    "name": "Bakersfield College",
+    "url": "https://www.bakersfieldcollege.edu/"
+  },
+  {
+    "id": 109907,
+    "name": "Barstow Community College",
+    "url": "www.barstow.edu/"
+  },
+  {
+    "id": 125170,
+    "name": "Berkeley City College",
+    "url": "www.berkeleycitycollege.edu/"
+  },
+  {
+    "id": 110246,
+    "name": "Butte College",
+    "url": "www.butte.edu/"
+  },
+  {
+    "id": 110334,
+    "name": "Cabrillo College",
+    "url": "https://www.cabrillo.edu/"
+  },
+  {
+    "id": 495271,
+    "name": "California Indian Nations College",
+    "url": "https://cincollege.org/"
+  },
+  {
+    "id": 111434,
+    "name": "Canada College",
+    "url": "canadacollege.edu/"
+  },
+  {
+    "id": 111887,
+    "name": "Cerritos College",
+    "url": "www.cerritos.edu/"
+  },
+  {
+    "id": 111896,
+    "name": "Cerro Coso Community College",
+    "url": "https://cerrocoso.edu/"
+  },
+  {
+    "id": 111920,
+    "name": "Chabot College",
+    "url": "www.chabotcollege.edu/"
+  },
+  {
+    "id": 111939,
+    "name": "Chaffey College",
+    "url": "https://www.chaffey.edu/"
+  },
+  {
+    "id": 112172,
+    "name": "Citrus College",
+    "url": "https://www.citruscollege.edu/"
+  },
+  {
+    "id": 112190,
+    "name": "City College of San Francisco",
+    "url": "www.ccsf.edu/"
+  },
+  {
+    "id": 489201,
+    "name": "Clovis Community College",
+    "url": "www.cloviscollege.edu/"
+  },
+  {
+    "id": 125462,
+    "name": "Coalinga College",
+    "url": "https://www.westhillscollege.com/coalinga/"
+  },
+  {
+    "id": 112385,
+    "name": "Coastline Community College",
+    "url": "https://www.coastline.edu/"
+  },
+  {
+    "id": 108667,
+    "name": "College of Alameda",
+    "url": "https://alameda.edu/"
+  },
+  {
+    "id": 118347,
+    "name": "College of Marin",
+    "url": "www.marin.edu/"
+  },
+  {
+    "id": 122791,
+    "name": "College of San Mateo",
+    "url": "www.collegeofsanmateo.edu/"
+  },
+  {
+    "id": 111461,
+    "name": "College of the Canyons",
+    "url": "www.canyons.edu/"
+  },
+  {
+    "id": 113573,
+    "name": "College of the Desert",
+    "url": "www.collegeofthedesert.edu/"
+  },
+  {
+    "id": 121707,
+    "name": "College of the Redwoods",
+    "url": "https://www.redwoods.edu/"
+  },
+  {
+    "id": 123217,
+    "name": "College of the Sequoias",
+    "url": "https://www.cos.edu/"
+  },
+  {
+    "id": 123484,
+    "name": "College of the Siskiyous",
+    "url": "www.siskiyous.edu/"
+  },
+  {
+    "id": 112561,
+    "name": "Columbia College",
+    "url": "https://www.gocolumbia.edu/"
+  },
+  {
+    "id": 112686,
+    "name": "Compton College",
+    "url": "www.compton.edu/"
+  },
+  {
+    "id": 112826,
+    "name": "Contra Costa College",
+    "url": "https://www.contracosta.edu/"
+  },
+  {
+    "id": 395362,
+    "name": "Copper Mountain Community College",
+    "url": "www.cmccd.edu/"
+  },
+  {
+    "id": 113096,
+    "name": "Cosumnes River College",
+    "url": "https://www.crc.losrios.edu/"
+  },
+  {
+    "id": 113111,
+    "name": "Crafton Hills College",
+    "url": "www.craftonhills.edu/"
+  },
+  {
+    "id": 113193,
+    "name": "Cuesta College",
+    "url": "https://www.cuesta.edu/"
+  },
+  {
+    "id": 113218,
+    "name": "Cuyamaca College",
+    "url": "https://www.cuyamaca.edu/"
+  },
+  {
+    "id": 113236,
+    "name": "Cypress College",
+    "url": "www.cypresscollege.edu/"
+  },
+  {
+    "id": 113333,
+    "name": "De Anza College",
+    "url": "https://www.deanza.edu/"
+  },
+  {
+    "id": 113634,
+    "name": "Diablo Valley College",
+    "url": "https://www.dvc.edu/"
+  },
+  {
+    "id": 113856,
+    "name": "East Los Angeles College",
+    "url": "www.elac.edu/"
+  },
+  {
+    "id": 113980,
+    "name": "El Camino Community College District",
+    "url": "www.elcamino.edu/"
+  },
+  {
+    "id": 114266,
+    "name": "Evergreen Valley College",
+    "url": "https://www.evc.edu/"
+  },
+  {
+    "id": 114433,
+    "name": "Feather River Community College District",
+    "url": "www.frc.edu/"
+  },
+  {
+    "id": 444219,
+    "name": "Folsom Lake College",
+    "url": "https://www.flc.losrios.edu/"
+  },
+  {
+    "id": 114716,
+    "name": "Foothill College",
+    "url": "https://foothill.edu/"
+  },
+  {
+    "id": 114789,
+    "name": "Fresno City College",
+    "url": "www.fresnocitycollege.edu/"
+  },
+  {
+    "id": 114859,
+    "name": "Fullerton College",
+    "url": "www.fullcoll.edu/"
+  },
+  {
+    "id": 114938,
+    "name": "Gavilan College",
+    "url": "https://www.gavilan.edu/"
+  },
+  {
+    "id": 115001,
+    "name": "Glendale Community College",
+    "url": "https://www.glendale.edu/"
+  },
+  {
+    "id": 115126,
+    "name": "Golden West College",
+    "url": "https://www.goldenwestcollege.edu/"
+  },
+  {
+    "id": 115296,
+    "name": "Grossmont College",
+    "url": "https://www.grossmont.edu/"
+  },
+  {
+    "id": 115393,
+    "name": "Hartnell College",
+    "url": "www.hartnell.edu/"
+  },
+  {
+    "id": 115861,
+    "name": "Imperial Valley College",
+    "url": "www.imperial.edu/"
+  },
+  {
+    "id": 116439,
+    "name": "Irvine Valley College",
+    "url": "https://www.ivc.edu/"
+  },
+  {
+    "id": 117195,
+    "name": "Lake Tahoe Community College",
+    "url": "www.ltcc.edu/"
+  },
+  {
+    "id": 117247,
+    "name": "Laney College",
+    "url": "laney.edu/"
+  },
+  {
+    "id": 366401,
+    "name": "Las Positas College",
+    "url": "www.laspositascollege.edu/"
+  },
+  {
+    "id": 117274,
+    "name": "Lassen Community College",
+    "url": "https://www.lassencollege.edu/"
+  },
+  {
+    "id": 448594,
+    "name": "Lemoore College",
+    "url": "https://www.westhillscollege.com/lemoore/"
+  },
+  {
+    "id": 117645,
+    "name": "Long Beach City College",
+    "url": "www.lbcc.edu/"
+  },
+  {
+    "id": 117788,
+    "name": "Los Angeles City College",
+    "url": "www.lacc.edu/"
+  },
+  {
+    "id": 117803,
+    "name": "Los Angeles County College of Nursing and Allied Health",
+    "url": "https://dhs.lacounty.gov/college-of-nursing-and-allied-health/"
+  },
+  {
+    "id": 117690,
+    "name": "Los Angeles Harbor College",
+    "url": "https://www.lahc.edu/"
+  },
+  {
+    "id": 117867,
+    "name": "Los Angeles Mission College",
+    "url": "https://www.lamission.edu/"
+  },
+  {
+    "id": 117706,
+    "name": "Los Angeles Pierce College",
+    "url": "www.lapc.edu/"
+  },
+  {
+    "id": 117715,
+    "name": "Los Angeles Southwest College",
+    "url": "https://www.lasc.edu/"
+  },
+  {
+    "id": 117724,
+    "name": "Los Angeles Trade Technical College",
+    "url": "www.lattc.edu/"
+  },
+  {
+    "id": 117733,
+    "name": "Los Angeles Valley College",
+    "url": "www.lavc.edu/"
+  },
+  {
+    "id": 117894,
+    "name": "Los Medanos College",
+    "url": "https://www.losmedanos.edu/"
+  },
+  {
+    "id": 497046,
+    "name": "Madera Community College",
+    "url": "https://www.maderacollege.edu/"
+  },
+  {
+    "id": 118684,
+    "name": "Mendocino College",
+    "url": "www.mendocino.edu/"
+  },
+  {
+    "id": 118718,
+    "name": "Merced College",
+    "url": "www.mccd.edu/"
+  },
+  {
+    "id": 118772,
+    "name": "Merritt College",
+    "url": "www.merritt.edu/"
+  },
+  {
+    "id": 118912,
+    "name": "MiraCosta College",
+    "url": "www.miracosta.edu/"
+  },
+  {
+    "id": 118930,
+    "name": "Mission College",
+    "url": "www.missioncollege.edu/"
+  },
+  {
+    "id": 118976,
+    "name": "Modesto Junior College",
+    "url": "https://www.mjc.edu/"
+  },
+  {
+    "id": 119067,
+    "name": "Monterey Peninsula College",
+    "url": "www.mpc.edu/"
+  },
+  {
+    "id": 119137,
+    "name": "Moorpark College",
+    "url": "www.moorparkcollege.edu/index.shtml"
+  },
+  {
+    "id": 460394,
+    "name": "Moreno Valley College",
+    "url": "www.mvc.edu/"
+  },
+  {
+    "id": 119164,
+    "name": "Mt San Antonio College",
+    "url": "www.mtsac.edu/"
+  },
+  {
+    "id": 119216,
+    "name": "Mt San Jacinto Community College District",
+    "url": "www.msjc.edu/"
+  },
+  {
+    "id": 119331,
+    "name": "Napa Valley College",
+    "url": "https://www.napavalley.edu/"
+  },
+  {
+    "id": 460464,
+    "name": "Norco College",
+    "url": "www.norcocollege.edu/"
+  },
+  {
+    "id": 120290,
+    "name": "Ohlone College",
+    "url": "www.ohlone.edu/"
+  },
+  {
+    "id": 120342,
+    "name": "Orange Coast College",
+    "url": "https://orangecoastcollege.edu/"
+  },
+  {
+    "id": 120421,
+    "name": "Oxnard College",
+    "url": "www.oxnardcollege.edu/"
+  },
+  {
+    "id": 120953,
+    "name": "Palo Verde College",
+    "url": "https://www.paloverde.edu/"
+  },
+  {
+    "id": 120971,
+    "name": "Palomar College",
+    "url": "www2.palomar.edu/"
+  },
+  {
+    "id": 121044,
+    "name": "Pasadena City College",
+    "url": "pasadena.edu/"
+  },
+  {
+    "id": 121363,
+    "name": "Porterville College",
+    "url": "https://www.portervillecollege.edu/"
+  },
+  {
+    "id": 117052,
+    "name": "Reedley College",
+    "url": "www.reedleycollege.edu/"
+  },
+  {
+    "id": 121886,
+    "name": "Rio Hondo College",
+    "url": "www.riohondo.edu/"
+  },
+  {
+    "id": 121901,
+    "name": "Riverside City College",
+    "url": "www.rcc.edu/"
+  },
+  {
+    "id": 122180,
+    "name": "Sacramento City College",
+    "url": "https://www.scc.losrios.edu/"
+  },
+  {
+    "id": 122205,
+    "name": "Saddleback College",
+    "url": "https://www.saddleback.edu/"
+  },
+  {
+    "id": 123527,
+    "name": "San Bernardino Valley College",
+    "url": "www.valleycollege.edu/"
+  },
+  {
+    "id": 122339,
+    "name": "San Diego City College",
+    "url": "www.sdcity.edu/"
+  },
+  {
+    "id": 122375,
+    "name": "San Diego Mesa College",
+    "url": "www.sdmesa.edu/"
+  },
+  {
+    "id": 122384,
+    "name": "San Diego Miramar College",
+    "url": "www.sdmiramar.edu/"
+  },
+  {
+    "id": 122658,
+    "name": "San Joaquin Delta College",
+    "url": "www.deltacollege.edu/"
+  },
+  {
+    "id": 122746,
+    "name": "San Jose City College",
+    "url": "www.sjcc.edu/"
+  },
+  {
+    "id": 121619,
+    "name": "Santa Ana College",
+    "url": "www.sac.edu/"
+  },
+  {
+    "id": 122889,
+    "name": "Santa Barbara City College",
+    "url": "www.sbcc.edu/"
+  },
+  {
+    "id": 122977,
+    "name": "Santa Monica College",
+    "url": "https://www.smc.edu/"
+  },
+  {
+    "id": 123013,
+    "name": "Santa Rosa Junior College",
+    "url": "www.santarosa.edu/"
+  },
+  {
+    "id": 399212,
+    "name": "Santiago Canyon College",
+    "url": "www.sccollege.edu/SitePages/Home.aspx"
+  },
+  {
+    "id": 123299,
+    "name": "Shasta College",
+    "url": "https://www.shastacollege.edu/"
+  },
+  {
+    "id": 123341,
+    "name": "Sierra College",
+    "url": "https://www.sierracollege.edu/"
+  },
+  {
+    "id": 123509,
+    "name": "Skyline College",
+    "url": "skylinecollege.edu/"
+  },
+  {
+    "id": 123563,
+    "name": "Solano Community College",
+    "url": "welcome.solano.edu/"
+  },
+  {
+    "id": 123800,
+    "name": "Southwestern College",
+    "url": "https://www.swccd.edu/"
+  },
+  {
+    "id": 124113,
+    "name": "Taft College",
+    "url": "www.taftcollege.edu/"
+  },
+  {
+    "id": 488800,
+    "name": "Teachers College of San Joaquin",
+    "url": "www.teacherscollegesj.edu/"
+  },
+  {
+    "id": 125028,
+    "name": "Ventura College",
+    "url": "www.venturacollege.edu/"
+  },
+  {
+    "id": 125091,
+    "name": "Victor Valley College",
+    "url": "www.vvc.edu/"
+  },
+  {
+    "id": 125471,
+    "name": "West Los Angeles College",
+    "url": "www.wlac.edu/"
+  },
+  {
+    "id": 125499,
+    "name": "West Valley College",
+    "url": "www.westvalley.edu/"
+  },
+  {
+    "id": 455512,
+    "name": "Woodland Community College",
+    "url": "https://wcc.yccd.edu/"
+  },
+  {
+    "id": 126119,
+    "name": "Yuba College",
+    "url": "https://yc.yccd.edu/"
+  }
+]

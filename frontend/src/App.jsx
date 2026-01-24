@@ -7,17 +7,15 @@ import {
 } from 'lucide-react';
 
 import Dashboard from './Dashboard';
-const MOCK_COLLEGES = [
-  "De Anza College", "Foothill College", "Mission College", "West Valley College",
-  "Ohlone College", "Las Positas College", "UCSC (Uc Santa Cruz)", "UCI (Uc Irvine)", "UCSD (Uc San Diego)", "UCB (Uc Berkeley)", "UCLA (Uc Los Angeles)", "UCD (Uc Davis)", "UCR (Uc Riverside)", "UCSB (Uc Santa Barbara)", "UCM (Uc Merced)"
-];
 import { useGoogleAuth } from './useGoogleAuth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 import { auth } from './firebase';
 import { addCourseToTranscript, removeCourseFromTranscript } from './fireData';
 const db = getFirestore();
 
-const OPENROUTER_API_KEY = "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";
+import CommunityCollegeDropdown from './cccList';
+
+const OPENROUTER_API_KEY = "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";
 const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
 
 const AI_MODEL = "anthropic/claude-opus-4.5";
@@ -564,7 +562,7 @@ function App() {
           );
         })}
       </div>
-      <div className="mt-auto pt-6"><div className="glass-dark rounded-xl p-4 text-center"><p className="text-white/60 text-xs mb-2">Powered by</p><p className="text-white font-display font-bold">Speed Bridgers at CruzHracks 2026</p></div></div>
+      <div className="mt-auto pt-6"><div className="glass-dark rounded-xl p-4 text-center"><p className="text-white/60 text-xs mb-2">Powered by</p><p className="text-white font-display font-bold">Speed Bridgers</p></div></div>
     </div>
   );
 
@@ -588,7 +586,59 @@ function App() {
           <div className="glass rounded-xl p-4 mb-4"><div className="flex items-center gap-3"><div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><CheckCircle className="w-5 h-5 text-emerald-400" /></div><div><p className="text-white/60 text-xs">Signed in as</p><p className="text-white font-medium">{user.email}</p></div></div></div>
           <input type="text" value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} placeholder="Your Name" className="input-field" required />
           <select value={user.major} onChange={(e) => { setUser(prev => ({ ...prev, major: e.target.value })); if (user.uid) updateUserFirestoreField(user.uid, { major: e.target.value }); }} className="input-field" required><option value="" disabled>Select a major</option>{MOCK_MAJORS.map(m => <option key={m} value={m}>{m}</option>)}</select>
-          <select value={user.communityCollege} onChange={(e) => { setUser(prev => ({ ...prev, communityCollege: e.target.value })); if (user.uid) updateUserFirestoreField(user.uid, { communityCollege: e.target.value }); }} className="input-field" required><option value="" disabled>Select your college</option>{MOCK_COLLEGES.map(c => <option key={c} value={c}>{c}</option>)}</select>
+          {/* School Type Selector */}
+<div className="flex gap-4">
+  <button
+    type="button"
+    className={`flex-1 p-2 rounded-lg border ${user.schoolType === 'cc' ? 'bg-ucsc-gold/20 border-ucsc-gold' : 'border-white/30'}`}
+    onClick={() => {
+      setUser(prev => ({ ...prev, schoolType: 'cc', communityCollege: '' }));
+      if (user.uid) updateUserFirestoreField(user.uid, { schoolType: 'cc', communityCollege: '' });
+    }}
+  >
+    Community College
+  </button>
+  <button
+    type="button"
+    className={`flex-1 p-2 rounded-lg border ${user.schoolType === 'uc' ? 'bg-ucsc-gold/20 border-ucsc-gold' : 'border-white/30'}`}
+    onClick={() => {
+      setUser(prev => ({ ...prev, schoolType: 'uc', targetUC: '' }));
+      if (user.uid) updateUserFirestoreField(user.uid, { schoolType: 'uc', targetUC: '' });
+    }}
+  >
+    UC
+  </button>
+</div>
+
+{/* Conditional Dropdown based on selected type */}
+{user.schoolType === 'cc' && (
+  <CommunityCollegeDropdown
+    selectedCollege={user.communityCollege}
+    onChange={(value) => {
+      setUser(prev => ({ ...prev, communityCollege: value }));
+      if (user.uid) updateUserFirestoreField(user.uid, { communityCollege: value });
+    }}
+  />
+)}
+
+{user.schoolType === 'uc' && (
+  <select
+    value={user.communityCollege || ''}
+    onChange={(e) => {
+      const selectedSchool = e.target.value;
+      setUser(prev => ({ ...prev, communityCollege: selectedSchool }));
+      if (user.uid) updateUserFirestoreField(user.uid, { communityCollege: selectedSchool });
+    }}
+    className="input-field"
+    required
+  >
+    <option value="" disabled>Select your UC</option>
+    {UC_CAMPUSES.map((uc) => (
+      <option key={uc.id} value={uc.name}>{uc.name}</option>
+    ))}
+  </select>
+)}
+          
           <button type="submit" className="btn-primary w-full mt-6">Continue<ArrowRight className="w-5 h-5 inline ml-2" /></button>
         </form>
       )}

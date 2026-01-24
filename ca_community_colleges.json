@@ -1,0 +1,474 @@
+[
+  {
+    "id": 108807,
+    "name": "Allan Hancock College"
+  },
+  {
+    "id": 109208,
+    "name": "American River College"
+  },
+  {
+    "id": 109350,
+    "name": "Antelope Valley Community College District"
+  },
+  {
+    "id": 109819,
+    "name": "Bakersfield College"
+  },
+  {
+    "id": 109907,
+    "name": "Barstow Community College"
+  },
+  {
+    "id": 125170,
+    "name": "Berkeley City College"
+  },
+  {
+    "id": 110246,
+    "name": "Butte College"
+  },
+  {
+    "id": 110334,
+    "name": "Cabrillo College"
+  },
+  {
+    "id": 495271,
+    "name": "California Indian Nations College"
+  },
+  {
+    "id": 111434,
+    "name": "Canada College"
+  },
+  {
+    "id": 111887,
+    "name": "Cerritos College"
+  },
+  {
+    "id": 111896,
+    "name": "Cerro Coso Community College"
+  },
+  {
+    "id": 111920,
+    "name": "Chabot College"
+  },
+  {
+    "id": 111939,
+    "name": "Chaffey College"
+  },
+  {
+    "id": 112172,
+    "name": "Citrus College"
+  },
+  {
+    "id": 112190,
+    "name": "City College of San Francisco"
+  },
+  {
+    "id": 489201,
+    "name": "Clovis Community College"
+  },
+  {
+    "id": 125462,
+    "name": "Coalinga College"
+  },
+  {
+    "id": 112385,
+    "name": "Coastline Community College"
+  },
+  {
+    "id": 108667,
+    "name": "College of Alameda"
+  },
+  {
+    "id": 118347,
+    "name": "College of Marin"
+  },
+  {
+    "id": 122791,
+    "name": "College of San Mateo"
+  },
+  {
+    "id": 111461,
+    "name": "College of the Canyons"
+  },
+  {
+    "id": 113573,
+    "name": "College of the Desert"
+  },
+  {
+    "id": 121707,
+    "name": "College of the Redwoods"
+  },
+  {
+    "id": 123217,
+    "name": "College of the Sequoias"
+  },
+  {
+    "id": 123484,
+    "name": "College of the Siskiyous"
+  },
+  {
+    "id": 112561,
+    "name": "Columbia College"
+  },
+  {
+    "id": 112686,
+    "name": "Compton College"
+  },
+  {
+    "id": 112826,
+    "name": "Contra Costa College"
+  },
+  {
+    "id": 395362,
+    "name": "Copper Mountain Community College"
+  },
+  {
+    "id": 113096,
+    "name": "Cosumnes River College"
+  },
+  {
+    "id": 113111,
+    "name": "Crafton Hills College"
+  },
+  {
+    "id": 113193,
+    "name": "Cuesta College"
+  },
+  {
+    "id": 113218,
+    "name": "Cuyamaca College"
+  },
+  {
+    "id": 113236,
+    "name": "Cypress College"
+  },
+  {
+    "id": 113333,
+    "name": "De Anza College"
+  },
+  {
+    "id": 113634,
+    "name": "Diablo Valley College"
+  },
+  {
+    "id": 113856,
+    "name": "East Los Angeles College"
+  },
+  {
+    "id": 113980,
+    "name": "El Camino Community College District"
+  },
+  {
+    "id": 114266,
+    "name": "Evergreen Valley College"
+  },
+  {
+    "id": 114433,
+    "name": "Feather River Community College District"
+  },
+  {
+    "id": 444219,
+    "name": "Folsom Lake College"
+  },
+  {
+    "id": 114716,
+    "name": "Foothill College"
+  },
+  {
+    "id": 114789,
+    "name": "Fresno City College"
+  },
+  {
+    "id": 114859,
+    "name": "Fullerton College"
+  },
+  {
+    "id": 114938,
+    "name": "Gavilan College"
+  },
+  {
+    "id": 115001,
+    "name": "Glendale Community College"
+  },
+  {
+    "id": 115126,
+    "name": "Golden West College"
+  },
+  {
+    "id": 115296,
+    "name": "Grossmont College"
+  },
+  {
+    "id": 115393,
+    "name": "Hartnell College"
+  },
+  {
+    "id": 115861,
+    "name": "Imperial Valley College"
+  },
+  {
+    "id": 116439,
+    "name": "Irvine Valley College"
+  },
+  {
+    "id": 117195,
+    "name": "Lake Tahoe Community College"
+  },
+  {
+    "id": 117247,
+    "name": "Laney College"
+  },
+  {
+    "id": 366401,
+    "name": "Las Positas College"
+  },
+  {
+    "id": 117274,
+    "name": "Lassen Community College"
+  },
+  {
+    "id": 448594,
+    "name": "Lemoore College"
+  },
+  {
+    "id": 117645,
+    "name": "Long Beach City College"
+  },
+  {
+    "id": 117788,
+    "name": "Los Angeles City College"
+  },
+  {
+    "id": 117803,
+    "name": "Los Angeles County College of Nursing and Allied Health"
+  },
+  {
+    "id": 117690,
+    "name": "Los Angeles Harbor College"
+  },
+  {
+    "id": 117867,
+    "name": "Los Angeles Mission College"
+  },
+  {
+    "id": 117706,
+    "name": "Los Angeles Pierce College"
+  },
+  {
+    "id": 117715,
+    "name": "Los Angeles Southwest College"
+  },
+  {
+    "id": 117724,
+    "name": "Los Angeles Trade Technical College"
+  },
+  {
+    "id": 117733,
+    "name": "Los Angeles Valley College"
+  },
+  {
+    "id": 117894,
+    "name": "Los Medanos College"
+  },
+  {
+    "id": 497046,
+    "name": "Madera Community College"
+  },
+  {
+    "id": 118684,
+    "name": "Mendocino College"
+  },
+  {
+    "id": 118718,
+    "name": "Merced College"
+  },
+  {
+    "id": 118772,
+    "name": "Merritt College"
+  },
+  {
+    "id": 118912,
+    "name": "MiraCosta College"
+  },
+  {
+    "id": 118930,
+    "name": "Mission College"
+  },
+  {
+    "id": 118976,
+    "name": "Modesto Junior College"
+  },
+  {
+    "id": 119067,
+    "name": "Monterey Peninsula College"
+  },
+  {
+    "id": 119137,
+    "name": "Moorpark College"
+  },
+  {
+    "id": 460394,
+    "name": "Moreno Valley College"
+  },
+  {
+    "id": 119164,
+    "name": "Mt San Antonio College"
+  },
+  {
+    "id": 119216,
+    "name": "Mt San Jacinto Community College District"
+  },
+  {
+    "id": 119331,
+    "name": "Napa Valley College"
+  },
+  {
+    "id": 460464,
+    "name": "Norco College"
+  },
+  {
+    "id": 120290,
+    "name": "Ohlone College"
+  },
+  {
+    "id": 120342,
+    "name": "Orange Coast College"
+  },
+  {
+    "id": 120421,
+    "name": "Oxnard College"
+  },
+  {
+    "id": 120953,
+    "name": "Palo Verde College"
+  },
+  {
+    "id": 120971,
+    "name": "Palomar College"
+  },
+  {
+    "id": 121044,
+    "name": "Pasadena City College"
+  },
+  {
+    "id": 121363,
+    "name": "Porterville College"
+  },
+  {
+    "id": 117052,
+    "name": "Reedley College"
+  },
+  {
+    "id": 121886,
+    "name": "Rio Hondo College"
+  },
+  {
+    "id": 121901,
+    "name": "Riverside City College"
+  },
+  {
+    "id": 122180,
+    "name": "Sacramento City College"
+  },
+  {
+    "id": 122205,
+    "name": "Saddleback College"
+  },
+  {
+    "id": 123527,
+    "name": "San Bernardino Valley College"
+  },
+  {
+    "id": 122339,
+    "name": "San Diego City College"
+  },
+  {
+    "id": 122375,
+    "name": "San Diego Mesa College"
+  },
+  {
+    "id": 122384,
+    "name": "San Diego Miramar College"
+  },
+  {
+    "id": 122658,
+    "name": "San Joaquin Delta College"
+  },
+  {
+    "id": 122746,
+    "name": "San Jose City College"
+  },
+  {
+    "id": 121619,
+    "name": "Santa Ana College"
+  },
+  {
+    "id": 122889,
+    "name": "Santa Barbara City College"
+  },
+  {
+    "id": 122977,
+    "name": "Santa Monica College"
+  },
+  {
+    "id": 123013,
+    "name": "Santa Rosa Junior College"
+  },
+  {
+    "id": 399212,
+    "name": "Santiago Canyon College"
+  },
+  {
+    "id": 123299,
+    "name": "Shasta College"
+  },
+  {
+    "id": 123341,
+    "name": "Sierra College"
+  },
+  {
+    "id": 123509,
+    "name": "Skyline College"
+  },
+  {
+    "id": 123563,
+    "name": "Solano Community College"
+  },
+  {
+    "id": 123800,
+    "name": "Southwestern College"
+  },
+  {
+    "id": 124113,
+    "name": "Taft College"
+  },
+  {
+    "id": 488800,
+    "name": "Teachers College of San Joaquin"
+  },
+  {
+    "id": 125028,
+    "name": "Ventura College"
+  },
+  {
+    "id": 125091,
+    "name": "Victor Valley College"
+  },
+  {
+    "id": 125471,
+    "name": "West Los Angeles College"
+  },
+  {
+    "id": 125499,
+    "name": "West Valley College"
+  },
+  {
+    "id": 455512,
+    "name": "Woodland Community College"
+  },
+  {
+    "id": 126119,
+    "name": "Yuba College"
+  }
+]
